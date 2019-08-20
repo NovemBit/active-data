@@ -28,14 +28,15 @@ abstract class ActiveData {
 
 	/**
 	 * ActiveData constructor.
-	 * @throws \Exception
+	 *
+	 * @throws Exception
 	 */
 	public function __construct() {
 		self::fetchFields();
 	}
 
 	/**
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public static function fetchFields() {
 
@@ -76,7 +77,7 @@ abstract class ActiveData {
 			}
 
 		} else {
-			throw new \Exception( 'Unsupported RDMS driver type.' );
+			throw new Exception( 'Unsupported RDMS driver type.' );
 		}
 
 		self::$_fetched = true;
@@ -86,7 +87,7 @@ abstract class ActiveData {
 
 	/**
 	 * @return string[]|null
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public static function getFieldsNames() {
 
@@ -99,7 +100,7 @@ abstract class ActiveData {
 
 	/**
 	 * @return string|null
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public static function getPKField() {
 		if ( self::fetchFields() ) {
@@ -161,7 +162,7 @@ abstract class ActiveData {
 	 * @param $pk
 	 *
 	 * @return ActiveData
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public static function findByPk( $pk ) {
 
@@ -182,7 +183,7 @@ abstract class ActiveData {
 	 * @param $pk
 	 *
 	 * @return array
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	private static function findFieldsByPk( $pk ) {
 
@@ -258,7 +259,7 @@ abstract class ActiveData {
 	}
 
 	/**
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public function isNewRecord() {
 		if ( $this->getPk() == null || ! $this->exists( $this->getPk() ) ) {
@@ -269,7 +270,7 @@ abstract class ActiveData {
 	}
 
 	/**
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public function delete() {
 		if ( $this->isNewRecord() ) {
@@ -292,7 +293,7 @@ abstract class ActiveData {
 	}
 
 	/**
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public function save() {
 
@@ -377,7 +378,7 @@ abstract class ActiveData {
 	}
 
 	/**
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public function getPk() {
 		return isset( $this->fields[ self::getPKField() ] ) ? $this->fields[ self::getPKField() ] : null;
