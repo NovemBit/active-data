@@ -1,5 +1,5 @@
 {
-  "name": "doctrine/orm",
+  "name": "novembit/active-data",
   "type": "library",
   "description": "ActiveData library",
   "keywords": [
@@ -19,28 +19,7 @@
     "php": "^5.6",
     "ext-pdo": "*"
   },
-  "require-dev": {
-    "ext-pdo": "*",
-    "doctrine/coding-standard": "^6.0",
-    "phpstan/phpstan": "^0.11",
-    "phpunit/phpunit": "^7.0"
-  },
   "autoload": {
-    "psr-4": { "Doctrine\\ORM\\": "lib/Doctrine/ORM" }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Doctrine\\Tests\\": "tests/Doctrine/Tests",
-      "Doctrine\\Performance\\": "tests/Doctrine/Performance"
-    }
-  },
-  "bin": ["bin/doctrine"],
-  "extra": {
-    "branch-alias": {
-      "dev-master": "3.0.x-dev"
-    }
-  },
-  "archive": {
-    "exclude": ["!vendor", "tests", "*phpunit.xml", ".travis.yml", "build.xml", "build.properties", "composer.phar", "vendor/satooshi", "lib/vendor", "*.swp"]
+    "psr-4": { "NovemBit\\": "src/" }
   }
 }
