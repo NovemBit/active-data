@@ -9,10 +9,20 @@ use PDOException;
 
 abstract class ActiveData {
 
+	/*
+	 * Table Name in db
+	 * */
 	public static $table_name;
 
+	/*
+	 * Private static property to keep all
+	 * Fields names in raw array
+	 * */
 	private static $fieldsNames;
 
+	/*
+	 * PK field name
+	 * */
 	private static $pkField;
 
 	private static $_fetched;

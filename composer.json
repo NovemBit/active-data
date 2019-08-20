@@ -14,12 +14,13 @@
     "ado",
     "pdo"
   ],
-  "license": "GPL-3",
   "require": {
     "php": "^5.6",
     "ext-pdo": "*"
   },
   "autoload": {
-    "psr-4": { "NovemBit\\": "src/" }
+    "psr-4": {
+      "NovemBit\\": "src/"
+    }
   }
 }
