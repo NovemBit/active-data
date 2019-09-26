@@ -1,5 +1,11 @@
 <?php
 
-$dir = __DIR__ . "/../../../../autoload.php";
+/*
+ * Composer autoloader
+ * */
 
-include($dir);
+use NovemBit\ActiveData\tests\models\Translation;
+
+include(__DIR__ . "/../../../../autoload.php");
+
+$model = new Translation();
