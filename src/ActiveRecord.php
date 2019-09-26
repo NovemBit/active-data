@@ -1,13 +1,13 @@
 <?php
 
 
-namespace NovemBit;
+namespace NovemBit\ActiveData;
 
 use \Exception;
 use PDO;
 use PDOException;
 
-abstract class ActiveData {
+abstract class ActiveRecord {
 
 	/*
 	 * Table Name in db
@@ -171,7 +171,7 @@ abstract class ActiveData {
 	/**
 	 * @param $pk
 	 *
-	 * @return ActiveData
+	 * @return ActiveRecord
 	 * @throws Exception
 	 */
 	public static function findByPk( $pk ) {
