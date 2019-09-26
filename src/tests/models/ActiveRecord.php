@@ -1,4 +1,5 @@
 <?php
+namespace NovemBit\ActiveData\tests\models;
 
 class ActiveRecord extends \NovemBit\ActiveData\ActiveRecord
 {

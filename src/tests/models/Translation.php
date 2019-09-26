@@ -1,6 +1,6 @@
 <?php
 
-namespace NovemBit\active;
+namespace NovemBit\ActiveData\tests\models;
 
 
 use NovemBit\ActiveData;
@@ -17,7 +17,7 @@ use PDO;
  * @property int    created_at
  * @property int    updated_at
  */
-class Translation extends ActiveData\ActiveRecord {
+class Translation extends ActiveRecord {
 
     public static $table_name = "bli18n_translations";
 
